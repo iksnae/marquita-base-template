@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { path } from './path';
+import { path } from '$lib/utils/path.js';
 
 // Mock $app/paths module
 vi.mock('$app/paths', () => ({
