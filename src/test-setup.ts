@@ -1,27 +1,27 @@
 // Import testing library extensions
 import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 
 // Mock global fetch for tests
 global.fetch = vi.fn();
 
-// Mock SvelteKit runtime modules
-vi.mock('$app/environment', () => ({
-  browser: false,
-  dev: true,
-}));
-
-vi.mock('$app/navigation', () => ({
-  goto: vi.fn(),
-  invalidate: vi.fn(),
-}));
-
-vi.mock('$app/paths', () => ({
-  base: '',
-}));
-
-// Set up any globals needed for tests
+// Set up global testing environment
 beforeAll(() => {
-  // Setup code that runs before all tests
+  // Create .svelte-kit directory if needed
+  if (typeof window === 'undefined') {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      
+      // Create .svelte-kit directory if it doesn't exist
+      const svelteKitDir = path.resolve(process.cwd(), '.svelte-kit');
+      if (!fs.existsSync(svelteKitDir)) {
+        fs.mkdirSync(svelteKitDir, { recursive: true });
+      }
+    } catch (error) {
+      console.warn('Failed to create .svelte-kit directory:', error);
+    }
+  }
 });
 
 afterAll(() => {
