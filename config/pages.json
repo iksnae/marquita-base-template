@@ -1,0 +1,112 @@
+{
+  "home": {
+    "hero": {
+      "title": "Welcome to Business Name",
+      "subtitle": "Your compelling subtitle here",
+      "ctaPrimary": {
+        "text": "Get Started",
+        "link": "/products/"
+      },
+      "ctaSecondary": {
+        "text": "Learn More",
+        "link": "/about/"
+      }
+    },
+    "sections": [
+      {
+        "type": "feature",
+        "title": "What We Offer",
+        "items": [
+          {
+            "title": "Feature 1",
+            "description": "Description of feature 1"
+          },
+          {
+            "title": "Feature 2",
+            "description": "Description of feature 2"
+          },
+          {
+            "title": "Feature 3",
+            "description": "Description of feature 3"
+          }
+        ]
+      },
+      {
+        "type": "testimonial",
+        "title": "What Our Customers Say",
+        "items": [
+          {
+            "quote": "This is a great product!",
+            "author": "Customer Name",
+            "company": "Company Name"
+          },
+          {
+            "quote": "Excellent service and support.",
+            "author": "Another Customer",
+            "company": "Another Company"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Learn more about our company and mission"
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Our Story",
+        "content": "Your company story goes here. This is a good place to share your founding story, mission, and values."
+      },
+      {
+        "type": "team",
+        "title": "Our Team",
+        "members": [
+          {
+            "name": "Team Member 1",
+            "role": "CEO",
+            "bio": "Short bio goes here",
+            "image": "/team/member1.jpg"
+          },
+          {
+            "name": "Team Member 2",
+            "role": "CTO",
+            "bio": "Short bio goes here",
+            "image": "/team/member2.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We'd love to hear from you"
+    },
+    "form": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "label": "Name",
+          "required": true
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email",
+          "required": true
+        },
+        {
+          "type": "textarea",
+          "name": "message",
+          "label": "Message",
+          "required": true
+        }
+      ],
+      "submitText": "Send Message"
+    }
+  }
+}
