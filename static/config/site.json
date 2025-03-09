@@ -1,0 +1,23 @@
+{
+  "name": "Business Name",
+  "tagline": "Your memorable tagline",
+  "logo": {
+    "text": "Business Name", 
+    "image": "/logo.png",
+    "useImage": false
+  },
+  "colors": {
+    "primary": "#e11d48",
+    "secondary": "#4b5563"
+  },
+  "contact": {
+    "email": "info@example.com",
+    "phone": "+1 234 567 8900",
+    "address": "123 Main St, City, Country"
+  },
+  "social": {
+    "instagram": "username",
+    "facebook": "pagename",
+    "twitter": "handle"
+  }
+}
