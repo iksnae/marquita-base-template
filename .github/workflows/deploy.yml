@@ -42,6 +42,11 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+      - name: Setup SvelteKit directory
+        run: |
+          mkdir -p .svelte-kit
+          echo '{}' > .svelte-kit/tsconfig.json
+      
       - name: Run tests
         run: npm test
         env:
@@ -65,11 +70,13 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Build
+      - name: Setup SvelteKit directory
         run: |
-          # Create empty .svelte-kit directory to prevent build errors
           mkdir -p .svelte-kit
-          npm run build
+          echo '{}' > .svelte-kit/tsconfig.json
+      
+      - name: Build
+        run: npm run build
         env:
           NODE_ENV: production
       
